@@ -35,9 +35,6 @@ const Combobox: React.FC<ComboboxProps> = ({ options,loading, getOptionLabel = (
       id: 'use-autocomplete-demo',
       options: options,
       getOptionLabel: getOptionLabel,
-      // Establecemos si la opción seleccionada coincide con alguna del listado.
-
-
    });
 
    return (
