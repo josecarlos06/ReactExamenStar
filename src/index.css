@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+@theme {
+  --primary: #1d3660f;
+}
