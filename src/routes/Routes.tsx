@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router"
 import LayoutAsidebar from "../layout/SidebarLayout"
-import PageUsuarios from "../pages/usuarios/PageUsuarios"
+import PageUsuarios from "../pages/usuarios/Page-Usuarios"
 import PageArea from "../pages/area/Page-Area"
 
 
