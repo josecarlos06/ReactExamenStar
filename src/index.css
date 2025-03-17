@@ -5,6 +5,13 @@ body{
   font-family: "Poppins", sans-serif;
 }
 
-@theme {
-  --primary: #1d3660f;
+.grid__menu {
+  display: grid;
+  grid-template-columns: 16rem 1fr; /* Sidebar de 16rem y contenido flexible */
+}
+
+@media (max-width: 768px) {
+  .grid__menu {
+    display: block;
+  }
 }

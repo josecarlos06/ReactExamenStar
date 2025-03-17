@@ -6,7 +6,29 @@ export interface Response<T = any>{
 
 export interface Area {
    idArea: number;
-   activo: number;
+   activo: boolean;
    nombre: string;
-   descripcion: string | null; // Si la descripción puede ser null o undefined
+   cantidadEmpleados ?: number
+   descripcion: string | null; 
 };
+
+
+export interface stateAction extends Area {
+  status: Boolean
+  action: 'delete' | 'update'
+}
+
+
+export interface ActionState extends Empleado {
+   active: boolean,
+   action: 'delete' | 'update',
+
+}
+
+export interface Empleado {
+   idEmpleado: number;   
+   nombre: string;
+   edad: number;
+   correoElectronico: string;
+   idArea: number;
+}

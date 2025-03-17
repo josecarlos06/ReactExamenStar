@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router"
-import LayoutAsidebar from "../layout/SidebarLayout"
-import PageUsuarios from "../pages/usuarios/Page-Usuarios"
-import PageArea from "../pages/area/Page-Area"
+import LayoutAsidebar from "@/layout/SidebarLayout"
+import PageArea from "@/pages/area/Page-Area"
+import PageUsuarios from "@/pages/usuarios/Page-Usuarios"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router"
 
 
 
@@ -11,9 +11,10 @@ const Rotues = () => {
          <Routes>
             {/* <Route path="/" element={<Home />} /> */}
             <Route path="dashboard" element={<LayoutAsidebar />}>
-               <Route path="usuario" element={<PageUsuarios />} /> 
+               <Route path="empleados" element={<PageUsuarios />} /> 
                <Route path="area" element={<PageArea />} /> 
             </Route>
+            <Route path="*" element={<Navigate to="dashboard" />}   /> 
          </Routes>
       </BrowserRouter>
    )
