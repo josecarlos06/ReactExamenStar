@@ -29,8 +29,8 @@ export const abecedarioUIColores = {
 
 export const cleanInput = (e: React.FormEvent<HTMLInputElement>) => {
   const { value } = e.currentTarget;
-  const regex = /^[a-zA-Z0-9\s]*$/;
+  const regex = /^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]*$/;
   if (!regex.test(value)) {
-    e.currentTarget.value = value.replace(/[^a-zA-Z0-9\s]/g, "");
+    e.currentTarget.value = value.replace(/[^a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]/g, "");
   }
 };

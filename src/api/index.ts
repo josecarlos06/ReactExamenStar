@@ -44,7 +44,7 @@ class HttpService {
  }
 
 
-export const api = new HttpService('https://localhost:7292/api/');
+export const api = new HttpService('https://api.rosticeriaelrey.com/api/');
 
 
 

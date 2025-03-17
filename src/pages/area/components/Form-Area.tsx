@@ -54,6 +54,7 @@ const FormArea = ({ fn, updateArea }: Props) => {
          activo: updateArea?.activo || true,
          nombre: nombreValue,
          descripcion: descripcionValue,
+         alta : new Date().toISOString()
       }
       if (updateArea?.idArea) {
          return update.mutate(area)

@@ -8,6 +8,7 @@ export interface Area {
    idArea: number;
    activo: boolean;
    nombre: string;
+   alta : string;
    cantidadEmpleados ?: number
    descripcion: string | null; 
 };
@@ -29,6 +30,7 @@ export interface Empleado {
    idEmpleado: number;   
    nombre: string;
    edad: number;
+   alta : string;
    correoElectronico: string;
    idArea: number;
 }

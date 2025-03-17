@@ -87,6 +87,7 @@ const FormUsers = ({ fn, actions }: Props) => {
          correoElectronico: (correo.current?.value || actions?.correoElectronico) || "",
          edad: edad.current?.value ? +edad.current.value : 0,
          idArea: selectedTitle?.idArea || 0,
+         alta : new Date().toISOString(),
       };
 
       if (actions?.idArea) {

@@ -3,8 +3,6 @@ import PageArea from "@/pages/area/Page-Area"
 import PageUsuarios from "@/pages/usuarios/Page-Usuarios"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router"
 
-
-
 const Rotues = () => {
    return (
       <BrowserRouter>
