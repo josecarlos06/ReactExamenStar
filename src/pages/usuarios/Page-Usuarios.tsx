@@ -67,7 +67,7 @@ const PageUsuarios = () => {
                         value={filters}
                      />
                      <Table
-                        itemSize={20}
+                        itemSize={5}
                         columns={columns}
                         active={filters}
                         dataValue={filteredData || []}

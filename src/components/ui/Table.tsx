@@ -60,7 +60,7 @@ const Table = <T extends unknown>({ itemSize = 10, columns, dataValue, active = 
    return (
       <div className="w-full">
          <div className="overflow-x-auto w-full border border-gray-200 rounded-lg">
-            <table className="w-full table-auto">
+            <table className="w-full table-auto ">
                <thead className="border-b border-gray-200">
                   {table.getHeaderGroups().map((headerGroup) => (
                      <tr key={headerGroup.id}>
@@ -95,9 +95,9 @@ const Table = <T extends unknown>({ itemSize = 10, columns, dataValue, active = 
                      </tr>
                   ))}
                </thead>
-               <tbody className="bg-white text-center">
+               <tbody className=" text-center bg-white ">
                   {table.getRowModel().rows.map((row) => (
-                     <tr key={row.id}>
+                     <tr key={row.id} className="hover:bg-gray-100 even:bg-gray-100">
                         {row.getVisibleCells().map((cell) => (
                            <td
                               key={cell.id}

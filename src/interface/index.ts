@@ -33,4 +33,5 @@ export interface Empleado {
    alta : string;
    correoElectronico: string;
    idArea: number;
+   area?: string
 }

@@ -77,7 +77,7 @@ const PageArea = () => {
             />
             <Table
               active={filters}
-              itemSize={10}
+              itemSize={5}
               columns={columns}
               dataValue={filteredData || []}
             />
