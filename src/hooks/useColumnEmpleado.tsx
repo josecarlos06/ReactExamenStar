@@ -25,7 +25,7 @@ export const useColumnEmpleado = (setIsAction: SetIsAction, setIsOpen: SetIsOpen
                   {row.original.nombre.charAt(0).toUpperCase()}
                </div>
                <div className="flex flex-col items-start">
-                  <span className="text-gray-700 font-medium">{row.original.nombre}</span>
+                  <span className="text-gray-700 font-medium capitalize">{row.original.nombre.toLowerCase()}</span>
                   <span className="text-xs text-gray-500">{row.original.correoElectronico}</span>
                </div>
             </div>

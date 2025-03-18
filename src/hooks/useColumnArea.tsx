@@ -18,7 +18,7 @@ const useColumnArea = (setIsAction: SetIsAction, setIsOpen: SetIsOpen): ColumnDe
         cell: ({ row }) => (
           <div className="flex items-center gap- w-48">
             <div className="flex flex-col items-start">
-              <p className="text-gray-700 font-medium text-start">{row.original.nombre}</p>
+              <p className="text-gray-700 font-medium text-start capitalize">{row.original.nombre.toLowerCase()}</p>
             </div>
           </div>
         ),

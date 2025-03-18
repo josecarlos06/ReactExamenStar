@@ -97,7 +97,7 @@ const Table = <T extends unknown>({ itemSize = 10, columns, dataValue, active = 
                </thead>
                <tbody className=" text-center bg-white ">
                   {table.getRowModel().rows.map((row) => (
-                     <tr key={row.id} className="hover:bg-gray-100 even:bg-gray-100">
+                     <tr key={row.id} className="transition-all hover:bg-gray-100 even:bg-gray-50">
                         {row.getVisibleCells().map((cell) => (
                            <td
                               key={cell.id}
