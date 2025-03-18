@@ -46,14 +46,15 @@ const Table = <T extends unknown>({ itemSize = 10, columns, dataValue, active = 
       getPaginationRowModel: getPaginationRowModel(),
       initialState: {
          pagination: {
-            pageSize: pageSize,
+            pageSize: pageSize, 
          },
       },
    });
 
    const handlePageSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-      setPageSize(Number(e.target.value));
-      table.setPageSize(Number(e.target.value));
+      const newSize = Number(e.target.value);
+      setPageSize(newSize);
+      table.setPageSize(newSize);
    };
 
    return (
@@ -75,19 +76,17 @@ const Table = <T extends unknown>({ itemSize = 10, columns, dataValue, active = 
                                  {header.isPlaceholder ? null : (
                                     <>
                                        <div>{flexRender(header.column.columnDef.header, header.getContext())}</div>
-                                       {/* Filtro en el th de la columna */}
-                                       {
-                                          active &&
+                                       {active && (
                                           <input
                                              type="text"
                                              className="mt-1 px-2 py-1 text-gray-600 bg-gray-100 border border-gray-300 rounded-lg text-sm w-full placeholder:text-xs"
-                                             placeholder={`Buscar ...`}
+                                             placeholder="Buscar ..."
                                              value={filters[columnId] || ""}
                                              onChange={(e) =>
                                                 handleFilterChange(columnId, e.target.value)
                                              }
                                           />
-                                       }
+                                       )}
                                     </>
                                  )}
                               </th>
@@ -116,7 +115,6 @@ const Table = <T extends unknown>({ itemSize = 10, columns, dataValue, active = 
             )}
          </div>
          <div className="h-4" />
-
 
          <div className="flex items-center justify-between mt-2">
             <div>
@@ -164,9 +162,6 @@ const Table = <T extends unknown>({ itemSize = 10, columns, dataValue, active = 
                   </svg>
                </button>
             </div>
-
-            {/* Selector de tamaño de página */}
-
          </div>
       </div>
    );

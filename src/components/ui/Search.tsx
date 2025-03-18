@@ -40,7 +40,7 @@ const Search = ({ searchTerm, setSearchTerm, fn, value }: Props) => {
             </div>
          }
 
-         <div className="ml-auto">
+         <div className="ml-auto flex items-center justify-center">
             <DropDownMenu type={true}>
                <>
                   <h3 className="text-sm text-gray-500 text-start mb-5 pb-2 border-b border-gray-200">Acciones</h3>

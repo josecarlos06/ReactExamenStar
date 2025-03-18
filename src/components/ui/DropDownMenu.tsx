@@ -25,7 +25,7 @@ const DropDownMenu = ({ type = false, children }: DropDownMenuProps) => {
 
 
          </MenuButton>
-         <MenuItems anchor="bottom" className="bg-white px-2 py-2 border border-gray-200 rounded-lg">
+         <MenuItems anchor="left start" className="bg-white px-2 py-2 border border-gray-200 rounded-lg mr-10">
             {children}
          </MenuItems>
       </Menu>

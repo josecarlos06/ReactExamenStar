@@ -12,7 +12,9 @@ const Asidebar = () => {
             <h3 className="text-sm text-gray-600">General</h3>
             <ul className="flex flex-col gap-1 mt-3">
                <li>
-                  <NavLink to="/" className="flex gap-2 items-center text-gray-600 text-sm hover:bg-gray-100 p-2 rounded-lg font-medium">
+                  <NavLink end to="/dashboard" className={({ isActive }) =>
+                        `${isActive ? "bg-[#1d3660] text-white" : "hover:bg-gray-100"} flex gap-2 items-center text-gray-600 text-sm  p-2 rounded-lg`
+                     }>
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="size-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
