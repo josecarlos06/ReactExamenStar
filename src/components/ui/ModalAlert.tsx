@@ -6,7 +6,7 @@ const ModalAlert = ( { name, fn, fnDelete, isLoad } : {name : string, fn : () =>
          <div className="bg-white border p-5 rounded-lg  border-gray-200 lg:w-[25rem] shadow-lg">
 
             <h2 className="mb-4 text-xl font-semibold text-[#1d3660]">Confirmar eliminación</h2>
-            <p className="mb-4 text-gray-500 text-sm">¿Estás seguro que deseas eliminar este elemento 
+            <p className="mb-4 text-gray-500 text-sm overflow-hidden">¿Estás seguro que deseas eliminar este elemento 
                <span className="font-semibold underline text-red-400 px-2"> {name} </span> ? Esta acción no se puede deshacer.</p>
 
             <div className="flex justify-end space-x-3">

@@ -16,7 +16,7 @@ const useColumnArea = (setIsAction: SetIsAction, setIsOpen: SetIsOpen): ColumnDe
         accessorKey: 'nombre',
         header: () => <div className="text-start">Area</div>,
         cell: ({ row }) => (
-          <div className="flex items-center gap- w-48">
+          <div className="flex items-center gap- w-48 overflow-hidden">
             <div className="flex flex-col items-start">
               <p className="text-gray-700 font-medium text-start capitalize">{row.original.nombre.toLowerCase()}</p>
             </div>
@@ -28,8 +28,10 @@ const useColumnArea = (setIsAction: SetIsAction, setIsOpen: SetIsOpen): ColumnDe
       {
         accessorKey: 'descripcion',
         header: () => <span>Descripcion</span>,
-        cell: ({ row }) => <p>{row.original.descripcion}</p>,
-        size: 350,
+        cell: ({ row }) => <div className="w-64 flex items-center justify-center mx-auto">
+          <p className='overflow-hidden'>{row.original.descripcion}</p>
+        </div>,
+        size: 250,
       },
       {
         accessorKey: 'cantidadEmpleados',

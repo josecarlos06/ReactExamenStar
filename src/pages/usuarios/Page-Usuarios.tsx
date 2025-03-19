@@ -89,7 +89,7 @@ const PageUsuarios = () => {
          {
             isOpen &&
             <div className="fixed top-0 right-0 bottom-0  left-0 bg-white/70 z-[200]">
-               <div className="bg-white lg:w-1/4 h-screen p-5 border-l border-gray-200 ml-auto relative">
+               <div className="bg-white lg:w-1/4 h-64 p-5 border-l border-gray-200 m-auto relative">
                   <ButtonClose onClick={() => { setIsAction(null); onClose() }} />
                   <FormUsers
                      actions={isAction}

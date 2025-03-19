@@ -14,7 +14,7 @@ export const useColumnEmpleado = (setIsAction: SetIsAction, setIsOpen: SetIsOpen
          accessorKey: "nombre",
          header: () => <div className="text-start">Nombre</div>,
          cell: ({ row }) => (
-            <div className="flex items-center gap-4 w-72">
+            <div className="flex items-center gap-4 w-72 overflow-hidden">
                <div
                   className="w-8 h-8 rounded-full flex items-center justify-center text-white"
                   style={{
@@ -24,10 +24,16 @@ export const useColumnEmpleado = (setIsAction: SetIsAction, setIsOpen: SetIsOpen
                >
                   {row.original.nombre.charAt(0).toUpperCase()}
                </div>
+               
                <div className="flex flex-col items-start">
-                  <span className="text-gray-700 font-medium capitalize">{row.original.nombre.toLowerCase()}</span>
-                  <span className="text-xs text-gray-500">{row.original.correoElectronico}</span>
+                  <span className="text-gray-700 font-medium capitalize line-clamp-2">
+                     {row.original.nombre.toLowerCase()}
+                  </span>
+                  <span className="text-xs text-gray-500 line-clamp-2">
+                     {row.original.correoElectronico}
+                  </span>
                </div>
+
             </div>
          ),
          size: 140,
@@ -88,6 +94,4 @@ export const useColumnEmpleado = (setIsAction: SetIsAction, setIsOpen: SetIsOpen
          ),
       },
    ], [])
-
-
 };

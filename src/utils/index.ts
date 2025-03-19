@@ -35,3 +35,30 @@ export const cleanInput = (e: React.FormEvent<HTMLInputElement>) => {
     e.currentTarget.value = value.replace(/[^a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]/g, "");
   }
 };
+
+/* 
+export const cleanInput = (e: React.FormEvent<HTMLInputElement>) => {
+  const { value } = e.currentTarget;
+  let cleanedValue = "";
+  let lastChar = "";
+  let repeatCount = 0;
+
+  for (const char of value) {
+    if (
+      /[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]/.test(char) 
+    ) {
+      if (char === lastChar) {
+        repeatCount++;
+      } else {
+        repeatCount = 1; 
+      }
+      if (repeatCount <= 2) {
+        cleanedValue += char;
+      }
+
+      lastChar = char; 
+    }
+  }
+
+  e.currentTarget.value = cleanedValue;
+}; */

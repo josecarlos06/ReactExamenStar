@@ -152,7 +152,7 @@ const FormUsers = ({ fn, actions }: Props) => {
                   type="email"
                   id="correo"
                   name="correo"
-                  maxLength={100}
+                  maxLength={50}
                   required
                   onBlur={handleBlur}
                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
@@ -225,3 +225,4 @@ const FormUsers = ({ fn, actions }: Props) => {
 };
 
 export default FormUsers;
+
