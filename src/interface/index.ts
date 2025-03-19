@@ -23,7 +23,6 @@ export interface stateAction extends Area {
 export interface ActionState extends Empleado {
    active: boolean,
    action: 'delete' | 'update',
-
 }
 
 export interface Empleado {

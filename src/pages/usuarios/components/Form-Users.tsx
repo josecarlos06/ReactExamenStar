@@ -138,6 +138,7 @@ const FormUsers = ({ fn, actions }: Props) => {
                   name="nombre"
                   onBlur={handleBlur}
                   onInput={cleanInput}
+                  maxLength={100}
                   className="w-full bg-gray-50 p-2 rounded-lg border border-gray-200 placeholder:text-xs capitalize"
                />
                {errors.nombre && <span className="text-red-500 text-xs">{errors.nombre}</span>}
@@ -151,6 +152,7 @@ const FormUsers = ({ fn, actions }: Props) => {
                   type="email"
                   id="correo"
                   name="correo"
+                  maxLength={100}
                   required
                   onBlur={handleBlur}
                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"

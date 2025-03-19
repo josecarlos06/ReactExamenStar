@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from "react"
 
 
-const ButtonAdd = ({text = '', ...props } : {text : string} & ButtonHTMLAttributes<HTMLButtonElement> ) => {
+const ButtonAdd = ({ text = '', ...props } : {text : string} & ButtonHTMLAttributes<HTMLButtonElement> ) => {
    return (
       <button
          role="button"

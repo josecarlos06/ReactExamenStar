@@ -25,7 +25,7 @@ const PageUsuarios = () => {
 
    const deleteEmpleado = useMutation({
       mutationFn: (data: { id: number }) => api.delete(`Empleado/DeleteEmpleado/${data.id}`),
-      onSuccess: (data: Response) => {
+      onSuccess: ( data : Response) => {
          toast.success(`${data.message}`);
          refetch()
          setIsAction(null)

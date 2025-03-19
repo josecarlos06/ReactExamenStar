@@ -43,7 +43,7 @@ class HttpService {
    }
  }
 
-
+/* instancia  */
 export const api = new HttpService('https://api.rosticeriaelrey.com/api/');
 
 
